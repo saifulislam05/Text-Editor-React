@@ -2,7 +2,7 @@
 import React from "react";
 
 const Logo = () => {
-  return <a href="/" className="btn btn-ghost text-xl font-bold text-primary-content">Text Editor</a>;
+  return <a href="/" className="text-xl font-bold text-primary-content">Text Editor</a>;
 };
 
 export default Logo;
