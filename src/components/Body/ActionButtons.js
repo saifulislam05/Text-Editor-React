@@ -1,14 +1,43 @@
 import React from "react";
-import Button from "./Button";
-const ActionButtons = () => {
+
+const ActionButtons = ({ dispatch }) => {
+  const handleButtonClick = (actionType) => {
+    dispatch({ type: actionType });
+  };
+
   return (
-      <div className="bg-primary h-[10%] flex justify-center items-center gap-1 py-2">
-        <Button title="Convert to Uppercase" bg="accent" />
-        <Button title="Convert to Lowercase" bg="accent" />
-        <Button title="Clear All" bg="error" />
-        <Button title="Remove Extra Spaces" bg="warning"/>
-        <Button title="Copy to Clipboard" bg="success"/>
-  </div>
+    <div className="bg-primary h-[10%] flex justify-center items-center gap-1 py-2">
+      <button
+        className="btn  btn-accent "
+        onClick={() => handleButtonClick("UPPERCASE")}
+      >
+        Convert to Uppercase
+      </button>
+      <button
+        className="btn  btn-accent "
+        onClick={() => handleButtonClick("LOWERCASE")}
+      >
+        Convert to Lowercase
+      </button>
+      <button
+        className="btn  btn-error "
+        onClick={() => handleButtonClick("CLEARALL")}
+      >
+        Clear All
+      </button>
+      <button
+        className="btn  btn-warning "
+        onClick={() => handleButtonClick("REMOVEEXTRASPACE")}
+      >
+        Remove Extra Spaces
+      </button>
+      <button
+        className="btn  btn-success "
+        onClick={() => handleButtonClick("COPY")}
+      >
+        Copy to Clipboard
+      </button>
+    </div>
   );
 };
 

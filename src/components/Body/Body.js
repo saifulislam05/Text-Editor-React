@@ -7,10 +7,22 @@ const Body = () => {
     switch (action.type) {
       case "CHANGE":
         return { content: action.content };
+      case "UPPERCASE":
+        return { content: content.content.toUpperCase() };
+      case "LOWERCASE":
+        return { content: content.content.toLowerCase() };
+      case "CLEARALL":
+        return { content: "" };
+      case "REMOVEEXTRASPACE":
+        return { content: content.content.replace(/\s+/g, " ") };
+      case "COPY":
+        navigator.clipboard.writeText(content.content);
+        return content;
       default:
         return content;
     }
   };
+
 
   const [state, dispatch] = useReducer(editorReducer, {content:""})
     return (
