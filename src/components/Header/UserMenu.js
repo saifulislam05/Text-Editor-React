@@ -8,7 +8,7 @@ const UserMenu = () => {
         <div className="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0kgW8G1yaDLMld6xFyPp8APVw792Vc40fkdMrykBZg-qi-oH4RiOszkys-Assdi5leCs&usqp=CAU"
+            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
           />
         </div>
       </label>

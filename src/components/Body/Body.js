@@ -1,12 +1,13 @@
 import React, { useReducer } from "react";
 import ActionButtons from "./ActionButtons";
 import Editor from "./Editor";
+import Summary from "./Summary";
 
 const Body = () => {
   const editorReducer = (content, action) => {
     switch (action.type) {
       case "CHANGE":
-        return { content: action.content };
+        return { content: action.payload };
       case "UPPERCASE":
         return { content: content.content.toUpperCase() };
       case "LOWERCASE":
@@ -23,12 +24,12 @@ const Body = () => {
     }
   };
 
-
   const [state, dispatch] = useReducer(editorReducer, {content:""})
     return (
-      <div className="w-11/12 min-h-[85vh] mx-auto mt-4 rounded-3xl overflow-hidden bg-[#3b3b3b]">
+      <div className="w-11/12 h-[70vh]  mx-auto rounded-3xl shadow-xl overflow-hidden bg-[#3b3b3b]">
         <ActionButtons dispatch={dispatch} />
-        <Editor value={state.content} dispatch={ dispatch} />
+        <Editor value={state.content} dispatch={dispatch} />
+        <Summary value={state.content} />
       </div>
     );
 };

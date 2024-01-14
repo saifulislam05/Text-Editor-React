@@ -20,17 +20,18 @@ const ActionButtons = ({ dispatch }) => {
         Convert to Lowercase
       </button>
       <button
+        className="btn  btn-accent "
+        onClick={() => handleButtonClick("REMOVEEXTRASPACE")}
+      >
+        Remove Extra Spaces
+      </button>
+      <button
         className="btn  btn-error "
         onClick={() => handleButtonClick("CLEARALL")}
       >
         Clear All
       </button>
-      <button
-        className="btn  btn-warning "
-        onClick={() => handleButtonClick("REMOVEEXTRASPACE")}
-      >
-        Remove Extra Spaces
-      </button>
+
       <button
         className="btn  btn-success "
         onClick={() => handleButtonClick("COPY")}
